@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300,400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
 *,
 *:before,
 *:after {
@@ -29,8 +29,8 @@ h1 {
 }
 
 h2 {
-  font-size: 3rem;
-  padding: 2rem 0;
+  font-size: 3.5rem;
+  padding: 1rem 0;
   font-weight: 400;
 }
 
@@ -49,6 +49,8 @@ p {
 .content {
   color: white;
   background: radial-gradient(#2b3760, #0b1023);
+  overflow-y: hidden;
+  height: 100vh;
 }
 
 nav {
@@ -69,6 +71,51 @@ nav {
 
 .logo {
   font-size: 2rem;
+  z-index: 2;
+}
+
+.menu {
+  z-index: 2;
+  cursor: pointer;
+}
+
+.nav-open {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40vh;
+  width: 100%;
+  background: white;
+  z-index: 1;
+  color: #212a4c;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5% 1fr 1fr 5%;
+      grid-template-columns: 5% 1fr 1fr 5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
+}
+
+.nav-open > div {
+  height: 100px;
+  margin: auto;
+}
+
+.nav-open .contact {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+}
+
+.nav-open .social .social-links img {
+  padding: 0 20px;
 }
 
 .page {
@@ -79,18 +126,28 @@ nav {
       grid-template-columns: 5% 1fr 1fr 1fr 5%;
 }
 
+.chef,
+.barber {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .hero {
   overflow: hidden;
   height: 500px;
-  -ms-flex-item-align: center;
-      align-self: center;
-  justify-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-item-align: center;
+      align-self: center;
+  justify-self: center;
 }
 
-.hero img {
+.hero a img {
   height: 500px;
   -webkit-transition: -webkit-transform 0.3s ease-out;
   transition: -webkit-transform 0.3s ease-out;
@@ -99,18 +156,18 @@ nav {
   cursor: pointer;
 }
 
-.hero .model-right {
+.hero a .model-right {
   -webkit-transform: translate(0%, 10%);
           transform: translate(0%, 10%);
 }
 
-.hero .model-left {
+.hero a .model-left {
   -webkit-transform: translate(0%, -10%);
           transform: translate(0%, -10%);
 }
 
-.hero:hover .model-right,
-.hero:hover .model-left {
+.hero a:hover .model-right,
+.hero a:hover .model-left {
   -webkit-transform: translate(0%, 0%);
           transform: translate(0%, 0%);
 }
@@ -309,6 +366,9 @@ nav {
     height: auto;
     height: 500px;
   }
+  .page .hero img {
+    height: 500px;
+  }
   .page .details {
     -ms-grid-row: 2;
     -ms-grid-row-span: 1;
@@ -322,10 +382,10 @@ nav {
     font-size: 50%;
   }
   .page .hero {
-    height: auto;
+    height: 380px;
   }
   .page .hero img {
-    height: 300px;
+    height: 380px;
   }
   .story,
   .work {

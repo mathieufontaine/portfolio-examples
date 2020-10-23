@@ -10,4 +10,37 @@ nav {
 
 .logo {
   font-size: 2rem;
+  z-index: 2;
+}
+
+.menu {
+  z-index: 2;
+  cursor: pointer;
+}
+
+.nav-open {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40vh;
+  width: 100%;
+  background: white;
+  z-index: 1;
+  color: $photo-color;
+  display: grid;
+  grid-template-columns: 5% 1fr 1fr 5%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  transform: translateY(-200%);
+  > div {
+    height: 100px;
+    margin: auto;
+  }
+  .contact {
+    grid-column: 2/3;
+  }
+  .social .social-links img {
+    padding: 0 20px;
+  }
 }

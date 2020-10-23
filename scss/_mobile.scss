@@ -1,3 +1,9 @@
+@media (max-width: 1324px) {
+  // h1 {
+  //   font-size: 4rem;
+  // }
+}
+
 @media (max-width: 1024px) {
   .page {
     grid-template-columns: 5% 1fr 5%;
@@ -7,6 +13,9 @@
       grid-column: 2/3;
       height: auto;
       height: 500px;
+      img {
+        height: 500px;
+      }
     }
     .details {
       grid-row: 2/3;
@@ -21,9 +30,9 @@
   }
   .page {
     .hero {
-      height: auto;
+      height: 380px;
       img {
-        height: 300px;
+        height: 380px;
       }
     }
   }

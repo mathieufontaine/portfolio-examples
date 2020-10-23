@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300,400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+$photo-color: #212a4c;
+$chef-color: rgb(85, 7, 26);
+$barber-color: rgb(57, 57, 63);
+$secondary-color: #121931;
 
 *,
 *:before,
@@ -29,8 +34,8 @@ h1 {
 }
 
 h2 {
-  font-size: 3rem;
-  padding: 2rem 0;
+  font-size: 3.5rem;
+  padding: 1rem 0;
   font-weight: 400;
 }
 
@@ -48,5 +53,7 @@ p {
 
 .content {
   color: white;
-  background: radial-gradient(rgb(43, 55, 96), rgb(11, 16, 35));
+  background: radial-gradient(#2b3760, #0b1023);
+  overflow-y: hidden;
+  height: 100vh;
 }
