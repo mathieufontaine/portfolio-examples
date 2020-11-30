@@ -1,0 +1,62 @@
+/* Page load animation */
+.home-once {
+  opacity: 0;
+}
+.home-once-active {
+  transition: opacity 1s linear 0.3s;
+}
+.home-once-to {
+  opacity: 1;
+}
+
+/* Slide left to home */
+
+.home-leave {
+  transform: translateX(0%);
+}
+.home-leave-active {
+  transition: transform 1s $easing;
+}
+.home-leave-to {
+  transform: translateX(100%);
+}
+
+.home-enter {
+  transform: translateX(-100%);
+}
+.home-enter-active {
+  transition: transform 1s $easing;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+.home-enter-to {
+  transform: translateX(0%);
+}
+
+/* Transition with cover screen */
+.with-cover-leave-active,
+.with-cover-enter-active,
+.with-cover-leave-active .transition,
+.with-cover-enter-active .transition {
+  transition: transform 1s $easing;
+}
+
+// cover in
+.with-cover-leave .transition {
+  transform: translateY(-100%);
+}
+
+.with-cover-leave-to .transition {
+  transform: translateY(0%);
+}
+
+// cover down
+
+.with-cover-enter .transition {
+  transform: translateY(0%);
+}
+
+.with-cover-enter-to .transition {
+  transform: translateY(100%);
+}

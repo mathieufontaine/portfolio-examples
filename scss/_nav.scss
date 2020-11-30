@@ -1,3 +1,17 @@
+header.header-photograph {
+  // background: #ad9c94;
+}
+header.header-chef {
+  // background: #ad9c94;
+}
+header.header-barber,
+header.header-photograph,
+header.header-chef {
+  .logo {
+    color: black;
+  }
+}
+
 nav {
   min-height: 10vh;
   width: 90%;

@@ -6,20 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/simple-lightbox.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <title>Giuseppe Marelli</title>
+
 </head>
 
 <body>
+    <header class="header-barber">
+        <nav>
+            <a href="index.html">
+                <h3 class="logo">Portfolio Examples</h3>
+            </a>
+            <!-- <img src="img/hamburger.svg" alt="hamburger"> -->
+            <svg class="menu" width="43" height="23" viewBox="0 0 43 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <line y1="1.5" x2="43" y2="1.5" stroke="white" stroke-width="3" />
+                <line y1="11.5" x2="28" y2="11.5" stroke="white" stroke-width="3" />
+                <line y1="21.5" x2="16" y2="21.5" stroke="white" stroke-width="3" />
+            </svg>
+            <div class="nav-open">
+                <div class="contact">
+                    <h3>Contact</h3>
+                    <p>03812-824-984</p>
+                </div>
+                <div class="social">
+                    <h3>Social</h3>
+                    <div class="social-links">
+                        <img src="img/Facebook.svg" alt="Facebook">
+                        <img src="img/Twitter.svg" alt="Twitter">
+                        <img src="img/Instagram.svg" alt="Instagram">
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
     <main>
-        <div class="banner">
-            <img src="img/barber-bg.jpg" alt="">
+        <div class="banner" data-aos="fade-down">
+            <img src="img/barber-bg.jpg" alt="barber">
             <div class="author">
                 <h1>Giuseppe Marelli</h1>
                 <h3>Pro Hairstyleist</h3>
             </div>
         </div>
         <div class="story">
-            <div class="description">
+            <div class="description" data-aos="fade-right">
                 <h3>My Story</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident repellat ad nostrum maxime ab nisi
                     itaque, quod harum molestias nemo accusantium! Est sint velit odio obcaecati dicta? Ratione nostrum
@@ -30,20 +61,32 @@
                     facilis voluptatum placeat consectetur doloribus tempore fugiat soluta quod et, assumenda rerum
                     molestiae animi debitis, itaque atque est aspernatur commodi. Voluptatum!</p>
             </div>
-            <div class="profile">
+            <div class="profile" data-aos="fade-left">
                 <img src="img/barber-profile.jpg" alt="profile">
             </div>
         </div>
         <div class="work">
-            <div class="gallery">
-                <img src="img/barber-gallery-1.jpg" alt="barber-gallery">
-                <img src="img/barber-gallery-2.jpg" alt="barber-gallery">
-                <img src="img/barber-gallery-3.jpg" alt="barber-gallery">
-                <img src="img/barber-gallery-4.jpg" alt="barber-gallery">
-                <img src="img/barber-gallery-5.jpg" alt="barber-gallery">
-                <img src="img/barber-gallery-6.jpg" alt="barber-gallery">
+            <div class="gallery" data-aos="fade-right">
+                <a href="img/barber-gallery-1.jpg">
+                    <img src="img/barber-gallery-1.jpg" alt="barber-gallery">
+                </a>
+                <a href="img/barber-gallery-2.jpg">
+                    <img src="img/barber-gallery-2.jpg" alt="barber-gallery">
+                </a>
+                <a href="img/barber-gallery-3.jpg">
+                    <img src="img/barber-gallery-3.jpg" alt="barber-gallery">
+                </a>
+                <a href="img/barber-gallery-4.jpg">
+                    <img src="img/barber-gallery-4.jpg" alt="barber-gallery">
+                </a>
+                <a href="img/barber-gallery-5.jpg">
+                    <img src="img/barber-gallery-5.jpg" alt="barber-gallery">
+                </a>
+                <a href="img/barber-gallery-6.jpg">
+                    <img src="img/barber-gallery-6.jpg" alt="barber-gallery">
+                </a>
             </div>
-            <div class="description">
+            <div class="description" data-aos="fade-left">
                 <h3>My Work</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure incidunt facere tenetur praesentium
                     officia dolorem dolorum obcaecati laudantium voluptas perspiciatis? Consequuntur, veniam ducimus?
@@ -53,6 +96,14 @@
             </div>
         </div>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="js/simple-lightbox.min.js"></script>
+    <script type="module" src="js/page.js"></script>
+    <!-- <script src="https://unpkg.com/@barba/core"></script> -->
+    <!-- <script src="js/transitions.js"></script> -->
+    <!-- <script type="module" src="js/app.js"></script> -->
+
 </body>
 
 </html>

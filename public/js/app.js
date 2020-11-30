@@ -1,4 +1,5 @@
 import { throttle } from "./throttle.js";
+import { toggleNavbar } from "./navbar.js";
 
 const init = () => {
   const slides = document.querySelectorAll(".slide");
@@ -75,15 +76,15 @@ const init = () => {
 
     current = pageNumber;
   };
-
   const switchDots = dotNumber => {
     const activeDot = document.querySelectorAll(".slide")[dotNumber];
     slides.forEach(slide => {
       slide.classList.remove("active");
     });
-    activeDot.classList.add("active");
+    if (document.querySelector("main").classList.contains("home-page")) {
+      activeDot.classList.add("active");
+    }
   };
-
   const scrollChange = e => {
     if (e.deltaY > 0) {
       scrollSlide += 1;
@@ -99,36 +100,13 @@ const init = () => {
     }
     switchDots(scrollSlide);
     nextSlide(scrollSlide);
-    console.log(scrollSlide);
   };
 
-  document.addEventListener("wheel", throttle(scrollChange, 1500));
-  document.addEventListener("touchmove", throttle(scrollChange, 1500));
-
-  const hamburger = document.querySelector(".menu");
-  const hamburgerLines = document.querySelectorAll(".menu line");
-  const navOpen = document.querySelectorAll(".nav-open");
-  const contact = document.querySelectorAll(".contact");
-  const social = document.querySelectorAll(".social");
-  const logo = document.querySelectorAll(".logo");
-
-  const tl = new TimelineMax({ reversed: true });
-
-  tl.to(navOpen, 0.5, { y: 0 })
-    .fromTo(contact, 0.5, { opacity: 0, y: 10 }, { opacity: 1, y: 0 }, "-=0.1")
-    .fromTo(social, 0.5, { opacity: 0, y: 10 }, { opacity: 1, y: 0 }, "-=0.5")
-    .fromTo(logo, 0.2, { color: "white" }, { color: "black" }, "-=1")
-    .fromTo(
-      hamburgerLines,
-      0.2,
-      { stroke: "white" },
-      { stroke: "black" },
-      "-=1"
-    );
-
-  hamburger.addEventListener("click", () => {
-    tl.reversed() ? tl.play() : tl.reverse();
-  });
+  if (document.querySelector("main").classList.contains("home-page")) {
+    document.addEventListener("wheel", throttle(scrollChange, 1500));
+    document.addEventListener("touchmove", throttle(scrollChange, 1500));
+  }
 };
 
 init();
+toggleNavbar();

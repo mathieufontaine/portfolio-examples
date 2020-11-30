@@ -20,6 +20,8 @@
     .details {
       grid-row: 2/3;
       text-align: center;
+      margin: 0;
+      align-self: flex-start;
     }
   }
 }
@@ -27,6 +29,9 @@
 @media (max-width: 800px) {
   html {
     font-size: 50%;
+  }
+  .nav-open .social .social-links img {
+    padding: 0 10px;
   }
   .page {
     .hero {

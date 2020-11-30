@@ -4,6 +4,7 @@ $photo-color: #212a4c;
 $chef-color: rgb(85, 7, 26);
 $barber-color: rgb(57, 57, 63);
 $secondary-color: #121931;
+$easing: cubic-bezier(0.5, 0.7, 0.4, 1);
 
 *,
 *:before,
@@ -21,6 +22,7 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 a {
@@ -51,6 +53,38 @@ p {
   font-weight: 300;
 }
 
+.btn {
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 0.5em 2rem;
+  margin: 2rem 0;
+  background: white;
+  font-size: 1.5rem;
+  transition: all 1s ease;
+  color: white;
+}
+
+.photographer .btn {
+  background: $photo-color;
+  &:hover {
+    background: white;
+    color: $photo-color;
+  }
+}
+.chef .btn {
+  background: $chef-color;
+  &:hover {
+    background: white;
+    color: $chef-color;
+  }
+}
+.barber .btn {
+  background: $barber-color;
+  &:hover {
+    background: white;
+    color: $barber-color;
+  }
+}
 .content {
   color: white;
   background: radial-gradient(#2b3760, #0b1023);
