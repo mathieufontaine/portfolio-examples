@@ -5,7 +5,6 @@ const animationOnLoad = () => {
   const photoLeft = document.querySelector(".photographer .model-left");
   const photoRight = document.querySelector(".photographer .model-right");
   const photoText = document.querySelector(".photographer .details");
-  console.log("object");
 
   const tl = gsap.timeline();
   tl.to(photoRight, { y: "10%", duration: 0.5 })
