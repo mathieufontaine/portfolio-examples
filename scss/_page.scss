@@ -1,3 +1,38 @@
+.page {
+  color: white;
+}
+
+.page-photographer {
+  background: $photo-color;
+  header .logo {
+    color: $photo-color;
+  }
+  footer {
+    background: $photo-color;
+  }
+}
+.page-chef {
+  background: $chef-color;
+  color: white;
+  header .logo {
+    color: $chef-color;
+  }
+  footer {
+    background: $chef-color;
+  }
+}
+
+.page-barber {
+  background: $barber-color;
+  color: white;
+  header .logo {
+    color: $barber-color;
+  }
+  footer {
+    background: $barber-color;
+  }
+}
+
 .banner {
   height: 50vh;
   width: 100%;
@@ -10,15 +45,20 @@
   }
   .author {
     position: absolute;
-    top: 70%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -70%);
+    transform: translate(-50%, -50%);
     text-shadow: 2px 2px 2px rgb(128, 128, 128);
     text-align: center;
     color: rgb(244, 244, 244);
   }
 }
 
+.work-container {
+  background: white;
+  color: black;
+  padding: 4rem 0;
+}
 .story,
 .work {
   display: grid;
@@ -58,7 +98,6 @@
     a {
       width: 100%;
       height: 100%;
-
       img {
         height: 100%;
       }
@@ -66,6 +105,11 @@
     img {
       object-fit: cover;
       object-position: center;
+      transition: all 0.5s ease;
+      &:hover {
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+      }
     }
   }
 }

@@ -5,7 +5,7 @@
 }
 
 @media (max-width: 1024px) {
-  .page {
+  .section {
     grid-template-columns: 5% 1fr 5%;
     grid-template-rows: 2fr 1fr;
     align-items: center;
@@ -33,7 +33,16 @@
   .nav-open .social .social-links img {
     padding: 0 10px;
   }
-  .page {
+  .dots {
+    > div {
+      display: block;
+    }
+    h3 {
+      padding: 1rem 0;
+      font-size: 1.5rem;
+    }
+  }
+  .section {
     .hero {
       height: 380px;
       img {
@@ -54,6 +63,20 @@
     }
     .gallery {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 45%;
+  }
+  .section {
+    .hero {
+      height: 300px;
+      img {
+        height: 300px;
+      }
     }
   }
 }

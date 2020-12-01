@@ -1,5 +1,5 @@
-.page {
-  min-height: 90vh;
+.section {
+  min-height: 80vh;
   display: grid;
   grid-template-columns: 5% 1fr 1fr 1fr 5%;
 }
@@ -7,11 +7,26 @@
 .chef,
 .barber {
   position: absolute;
-  bottom: 0;
+  bottom: 7vh;
   left: 0;
   width: 100%;
   opacity: 0;
   pointer-events: none;
+}
+
+.photographer {
+  .hero a {
+    .model-right {
+      transform: translate(0%, 100%);
+    }
+    .model-left {
+      transform: translate(0%, -100%);
+    }
+  }
+  .details {
+    opacity: 0;
+    transform: translate(0%, -30px);
+  }
 }
 
 .hero {
@@ -37,7 +52,7 @@
     &:hover {
       .model-right,
       .model-left {
-        transform: translate(0%, 0%);
+        transform: translate(0%, 0%) !important;
       }
     }
   }
@@ -53,7 +68,7 @@
   }
 }
 
-.pages {
+.dots {
   position: absolute;
   right: 5%;
   top: 50%;
