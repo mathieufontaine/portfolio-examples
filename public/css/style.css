@@ -241,6 +241,11 @@ nav {
   grid-column: 2/3;
 }
 
+.nav-open .contact a {
+  color: black;
+  font-size: 1.5rem;
+}
+
 .nav-open .social .social-links img {
   padding: 0 20px;
 }
