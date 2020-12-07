@@ -254,8 +254,8 @@ nav {
   min-height: 80vh;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 5% 1fr 1fr 1fr 5%;
-      grid-template-columns: 5% 1fr 1fr 1fr 5%;
+  -ms-grid-columns: 5% 1fr 1.5fr 1fr 5%;
+      grid-template-columns: 5% 1fr 1.5fr 1fr 5%;
 }
 
 .chef,
